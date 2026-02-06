@@ -1,0 +1,58 @@
+/* 1. تصفير شامل لكل المتصفح لإلغاء أي حواف بيضاء */
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden !important; /* منع التمرير الخارجي نهائياً */
+  background: #000; /* سواد كامل خلف الواجهة */
+  -webkit-user-select: none; /* منع تحديد النص للحفاظ على شكل النظام */
+}
+
+/* 2. إخفاء أشرطة التمرير (Scrollbars) من كل مكان في البرنامج */
+*::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+}
+
+* {
+  scrollbar-width: none !important; /* لمتصفح فايرفوكس */
+  -ms-overflow-style: none !important; /* لمتصفح إيدج القديم */
+}
+
+/* 3. تعديل حاوية التصميم لتملأ الشاشة بدقة */
+.layout-container {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-rows: 1fr 280px; 
+  gap: 10px;
+  padding: 10px;
+  background: #000; /* تغيير الخلفية لسواد مطلق */
+  box-sizing: border-box; /* لضمان عدم خروج الحواف عن الشاشة */
+}
+
+.top-section {
+  display: grid;
+  grid-template-columns: 300px 1fr 300px; 
+  gap: 10px;
+  min-height: 0; /* ضروري لمنع تمدد العناصر */
+}
+
+.bottom-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 10px;
+  min-height: 0;
+}
+
+.panel {
+  border: 1px solid rgba(0, 243, 255, 0.3);
+  background: rgba(0, 10, 20, 0.8); /* تغميق الخلفية لتصير أفخم */
+  color: #00f3ff;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  overflow: hidden;
+  box-shadow: inset 0 0 15px rgba(0, 243, 255, 0.05); /* لمسة نيون داخلية خفيفة */
+}

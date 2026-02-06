@@ -1,4 +1,7 @@
 # EMAD-UI 🚀
+
+![EMAD-UI Preview](./screenshots/preview.png)
+
 > **A Futuristic Cyber-Dashboard Interface for Linux & Windows.**
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
